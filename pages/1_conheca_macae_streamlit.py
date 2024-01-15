@@ -33,7 +33,6 @@ def kpi_card(title, info, width=250):
     )
     
 def main():
-    
     st.markdown("<h1 style='text-align: center;'>Conheça Macaé - Informações Sociais</h1><hr>", unsafe_allow_html=True)
     
     st.write("""Bem-vindo à encantadora cidade de Macaé, localizada no interior do Rio de Janeiro. 
@@ -47,8 +46,8 @@ def main():
     )
     
     col_cor_graph1, col_cor_graph2 = st.columns(2)
-    col_cor_graph1.plotly_chart(macae_cor_fig, use_container_width=True)
-    col_cor_graph2.plotly_chart(brasil_cor_fig, use_container_width=True)
+    col_cor_graph1.plotly_chart(macae_cor_fig, use_container_width=True,config={'displaylogo': False})
+    col_cor_graph2.plotly_chart(brasil_cor_fig, use_container_width=True,config={'displaylogo': False})
     
     st.write("""Macaé possui uma população residente ligeiramente menor de amarelos e indígenas se comparados
                 com o panorama brasileiro. A distribuição de negros e brancos também varia em mais de cinco pontos percentuais,
@@ -60,7 +59,7 @@ def main():
              mais diversas regiões do Brasil em busca de oportunidades que a indústria multibilionária proporciona.
                 """)
     
-    st.plotly_chart(macae_pop_fig)
+    st.plotly_chart(macae_pop_fig,config={'displaylogo': False})
     
     
     col_txt_etaria, col_graph_etaria = st.columns(2)
@@ -75,7 +74,7 @@ def main():
                                 """)
         
     with col_graph_etaria:
-        st.plotly_chart(piramide_etaria_fig)
+        st.plotly_chart(piramide_etaria_fig,config={'displaylogo': False})
     
     col_card_1, _col_card_2,col_card_3, _col_card_4,col_card_5 = st.columns(5)
     with col_card_1:
@@ -87,20 +86,14 @@ def main():
     with col_card_5:
         kpi_card("Índice de GINI","0.56")
     
+    st.plotly_chart(sun_pop_fig,config={'displaylogo': False})
     
-    
-    st.plotly_chart(sun_pop_fig)
-    
-    st.markdown(
-        """
-        <style>
-        a {
-            text-decoration: none;
-        }
-        </style>
-        """,
-    unsafe_allow_html=True,
-    )
+    st.markdown("""
+                <h3>Referências</h3>
+                <p>Todos os dados foram retirados da API do IBGE e do <a href="http://www.atlasbrasil.org.br/">Atlas Brasil</a>.</p>
+                """,
+                unsafe_allow_html=True)
+
     st.sidebar.title("Portifólio e Currículo")
     st.sidebar.markdown("""
                         <p>📞+55 (22) 988147990 <br>
@@ -112,4 +105,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
