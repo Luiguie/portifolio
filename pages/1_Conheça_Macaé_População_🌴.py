@@ -33,7 +33,7 @@ def kpi_card(title, info, width=250):
     )
     
 def main():
-    st.markdown("<h1 style='text-align: center;'>Conheça Macaé - Informações Sociais</h1><hr>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Conheça Macaé - Indicadores Populacionais</h1><hr>", unsafe_allow_html=True)
     
     st.write("""Bem-vindo à encantadora cidade de Macaé, localizada no interior do Rio de Janeiro. 
         Conhecida por sua rica história e deslumbrante paisagem litorânea, Macaé destaca-se como 
