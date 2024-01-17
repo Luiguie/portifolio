@@ -33,7 +33,7 @@ def kpi_card(title, info, width=250):
     )
     
 def main():
-    st.set_page_config(page_title="Conheça Macaé - Social")
+    st.set_page_config(page_title="Conheça Macaé - Populacional")
     st.markdown("<h1 style='text-align: center;'>Conheça Macaé - Informações Sociais</h1><hr>", unsafe_allow_html=True)
     
     st.write("""Bem-vindo à encantadora cidade de Macaé, localizada no interior do Rio de Janeiro. 
@@ -88,7 +88,7 @@ def main():
         kpi_card("Índice de GINI","0.56")
     
     st.plotly_chart(sun_pop_fig,config={'displaylogo': False})
-    
+    st.write("Clique no gráfico para expandir ou retrair ☝️☝️.")
     st.markdown("""
                 <h3>Referências</h3>
                 <p>Todos os dados foram retirados da API do IBGE e do <a href="http://www.atlasbrasil.org.br/">Atlas Brasil</a>.</p>
@@ -105,4 +105,15 @@ def main():
                         unsafe_allow_html=True)
 
 if __name__ == "__main__":
+    st.markdown(
+        """
+        <style>
+        a {
+            text-decoration: none;
+        }
+        </style>
+        """,
+    unsafe_allow_html=True,
+    )
+    
     main()
