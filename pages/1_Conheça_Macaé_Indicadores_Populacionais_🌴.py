@@ -33,7 +33,6 @@ def kpi_card(title, info, width=250):
     )
     
 def main():
-    st.set_page_config(page_title="Conheça Macaé - Populacional")
     st.markdown("<h1 style='text-align: center;'>Conheça Macaé - Informações Sociais</h1><hr>", unsafe_allow_html=True)
     
     st.write("""Bem-vindo à encantadora cidade de Macaé, localizada no interior do Rio de Janeiro. 
@@ -105,6 +104,7 @@ def main():
                         unsafe_allow_html=True)
 
 if __name__ == "__main__":
+    st.set_page_config(page_title="Conheça Macaé - Populacional")
     st.markdown(
         """
         <style>

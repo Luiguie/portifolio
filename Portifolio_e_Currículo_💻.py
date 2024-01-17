@@ -72,14 +72,6 @@ def main():
                         unsafe_allow_html=True)
                         
 
-def clear_page():
-    # Use st.empty() to create an empty container
-    empty_container = st.empty()
-    # Clear the contents of the page
-    empty_container.text("")
-    
-
-
 if __name__ == "__main__":
     st.set_page_config(page_title="Portifolio")
     st.markdown(
