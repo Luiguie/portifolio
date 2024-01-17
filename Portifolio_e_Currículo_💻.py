@@ -81,11 +81,7 @@ def clear_page():
 
 
 if __name__ == "__main__":
-    st.set_page_config(layout="wide", page_title="Portifolio")
-    show_pages([
-        Page("portifolio.py","Portifolio e Currículo","💻"),
-        Page("pages/1_conheca_macae_streamlit.py","Conheça Macaé - Indicadores Sociais","🌴")
-    ])
+    st.set_page_config(page_title="Portifolio")
     st.markdown(
         """
         <style>
